@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\""
   },
   "keywords": [],
   "author": "",
@@ -16,8 +16,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  },
-"scripts": {
-  "test": "mocha"
-},
+  }
 }
