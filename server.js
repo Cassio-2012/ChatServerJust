@@ -7,7 +7,7 @@ const server = http.createServer(app.callback());
 const io = socket(server);
 
 const SERVER_HOST = "serverchatjust.azurewebsites.net";
-const SERVER_PORT = 8000;
+const SERVER_PORT = 443;
 
 io.on("connection", (socket) => {
   console.log("[IO] Connection => Server has a new connection");
