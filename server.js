@@ -6,9 +6,8 @@ const app = new Koa();
 const server = http.createServer(app.callback());
 const io = socket(server);
 
-const SERVER_HOST = "chat-server-just.herokuapp.com";
+
 const SERVER_PORT = process.env.PORT || 8000;
-// const SERVER_PORT = "http://serverchatjust.azurewebsites.net";
 
 io.on("connection", (socket) => {
   console.log("[IO] Connection => Server has a new connection");
@@ -23,7 +22,7 @@ io.on("connection", (socket) => {
 
 server.listen(SERVER_PORT, () => {
   console.log(
-    `[HTTP] Listen => Server is running at https://${SERVER_HOST}:${SERVER_PORT}`
+    `[HTTP] Listen => Server is running at http://${SERVER_HOST}:${SERVER_PORT}`
   );
   console.log(`[HTTP] Listen => Press CTRL+C to stop it`);
 });
