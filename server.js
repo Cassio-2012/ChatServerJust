@@ -22,7 +22,7 @@ io.on("connection", (socket) => {
 
 server.listen(SERVER_PORT, () => {
   console.log(
-    `[HTTP] Listen => Server oiii is running at http://${SERVER_HOST}:${SERVER_PORT}`
+    `[HTTP] Listen => Server oiii is running at port -> ${SERVER_PORT}`
   );
   console.log(`[HTTP] Listen => Press CTRL+C to stop it`);
 });
