@@ -7,7 +7,7 @@ const server = http.createServer(app.callback());
 const io = socket(server);
 
 
-const SERVER_PORT = 8080;
+const SERVER_PORT = process.env.PORT || 8877;
 
 io.on("connection", (socket) => {
   console.log("[IO] Connection => Server has a new connection");

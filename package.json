@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server",
+    "start": "node server",
     "test": "echo \"No test specified\""
   },
   "keywords": [],
@@ -16,5 +16,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cassio-2012/ChatServerJust.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cassio-2012/ChatServerJust/issues"
+  },
+  "homepage": "https://github.com/Cassio-2012/ChatServerJust#readme"
 }
