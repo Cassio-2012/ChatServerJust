@@ -1,9 +1,16 @@
 const Koa = require("koa");
 const http = require("http");
+var https = require('https');
 const socket = require("socket.io");
+var fs = require('fs');
+
+var options = {
+  key: fs.readFileSync('certificate_chat.key'),
+  cert: fs.readFileSync('certificate_chat.crt')
+};
 
 const app = new Koa();
-const server = http.createServer(app.callback());
+const server = https.createServer(options, app.callback());
 const io = socket(server);
 
 
@@ -22,7 +29,7 @@ io.on("connection", (socket) => {
 
 server.listen(SERVER_PORT, () => {
   console.log(
-    `[HTTP] Listen => Server oiii is running at port -> ${SERVER_PORT}`
+    `[HTTPS] Listen => Server oiii is running at port -> ${SERVER_PORT}`
   );
-  console.log(`[HTTP] Listen => Press CTRL+C to stop it`);
+  console.log(`[HTTPS] Listen => Press CTRL+C to stop it`);
 });

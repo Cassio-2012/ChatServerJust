@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "build": "^0.1.4",
     "koa": "^2.12.1",
     "socket.io": "^2.3.0"
   },
